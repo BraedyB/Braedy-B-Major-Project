@@ -1,38 +1,39 @@
 import de.looksgood.ani.*;
 import de.looksgood.ani.easing.*;
-float x = width/2;
-float y = height/2;
-float rad = height/6;
 
 
+
+ArrayList<Ball> theBalls = new ArrayList<Ball>();
+b1 = new Ball();
 
 
 void setup(){
   size(800,600);
   noStroke();
   Ani.init(this);
+  for (int i=0; i<5; i++){
+    
+    theBalls.add(new Ball());
+    
+  }
   
   
 }
 
 void draw(){
   background(0);
-  fill(255);
+  
   ellipseMode(CENTER);
-  ellipse(x,y,rad,rad);
+  fill(255);
+  b1.move();
+  
   
   
 }
 
 //void mousePressed(){
-//  Ani.to(this,2,"x", width-rad, Ani.CUBIC_IN);
-//  Ani.to(this,2,"y", height-rad, Ani.CUBIC_IN);
-//}
-//void mouseReleased(){
-//  Ani.to(this,2,"x", 0, Ani.CUBIC_OUT);
-//  Ani.to(this,2,"y", 0, Ani.CUBIC_IN);
-//  if (x == 0 && y == 0){
-//    Ani.to(this,2,"x",width,Ani.CUBIC_IN_OUT);  
-//    Ani.to(this,2,"y",height,Ani.CUBIC_OUT);
+//  Ani.to(this,2,"x", width, Ani.CUBIC_IN);
+//  if (x == width){
+//    Ani.to(this,2,"x",0,Ani.CUBIC_IN);
 //  }
 //}
