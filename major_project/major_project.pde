@@ -2,18 +2,19 @@ import de.looksgood.ani.*;
 import de.looksgood.ani.easing.*;
 
 
-
-ArrayList<Ball> theBalls = new ArrayList<Ball>();
-b1 = new Ball();
+ArrayList<Bouncer> theBouncers = new ArrayList<Bouncer>();
+//ArrayList<ArrayList<theBouncers>> theLists = new ArrayList<ArrayList
 
 
 void setup(){
   size(800,600);
   noStroke();
   Ani.init(this);
-  for (int i=0; i<5; i++){
+  for (int i=0; i<30; i++){
     
-    theBalls.add(new Ball());
+    theBouncers.add(new Bouncer());
+    
+    
     
   }
   
@@ -23,9 +24,10 @@ void setup(){
 void draw(){
   background(0);
   
-  ellipseMode(CENTER);
-  fill(255);
-  b1.move();
+  rectMode(CENTER);
+  for (Bouncer thisBouncer: theBouncers){
+    thisBouncer.move();
+  }
   
   
   

@@ -1,18 +1,23 @@
-class Ball{
-  float x,y,rad,aniSpeed;
+class Bouncer{
+  float x,y,rad,aniSpeed,opac;
 
-  Ball(){
+  Bouncer(){
+    opac = random(100);
     x = 0;
-    y = 0;
-    rad = height/6;
-    aniSpeed = random(1,27);
+    y = height/2;
+    rad = height/8;
+    opac = 100;
   }
   void move(){
-    ellipse(x,y,rad,rad);
+    fill(255,opac);
+    aniSpeed = random(1,2);
+
+    rect(x,y,rad,rad);
+    
     if (x == 0){
-      Ani.to(this,aniSpeed,"x",width, Ani.CUBIC_IN);
+      Ani.to(this,aniSpeed,"x",width, Ani.CUBIC_OUT);
     }else if (x == width){
-      Ani.to(this,aniSpeed,"x",0, Ani.CUBIC_IN);
+      Ani.to(this,aniSpeed,"x",0, Ani.CUBIC_OUT);
     }
   }
   
