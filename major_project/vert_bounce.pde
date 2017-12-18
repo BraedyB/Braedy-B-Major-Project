@@ -2,7 +2,7 @@ class vBouncer{
   float x,y,rad,aniSpeed,opac;
 
   vBouncer(){
-    opac = random(100);
+    opac = (100);
     x = width/2;
     y = 0;
     rad = height/8;
