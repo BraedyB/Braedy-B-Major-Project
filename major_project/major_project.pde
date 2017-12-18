@@ -2,17 +2,16 @@ import de.looksgood.ani.*;
 import de.looksgood.ani.easing.*;
 
 
-ArrayList<Bouncer> theBouncers = new ArrayList<Bouncer>();
-//ArrayList<ArrayList<theBouncers>> theLists = new ArrayList<ArrayList
-
+ArrayList<hBouncer> thehBouncers = new ArrayList<hBouncer>();
+ArrayList<vBouncer> thevBouncers = new ArrayList<vBouncer>();
 
 void setup(){
   size(800,600);
   noStroke();
   Ani.init(this);
-  for (int i=0; i<30; i++){
-    
-    theBouncers.add(new Bouncer());
+  for (int i=0; i<6; i++){
+    thevBouncers.add(new vBouncer());
+    thehBouncers.add(new hBouncer());
     
     
     
@@ -25,11 +24,13 @@ void draw(){
   background(0);
   
   rectMode(CENTER);
-  for (Bouncer thisBouncer: theBouncers){
-    thisBouncer.move();
+  for (hBouncer thishBouncer: thehBouncers){
+    thishBouncer.move();
+    
   }
-  
-  
+  for (vBouncer thisvBouncer: thevBouncers){
+    thisvBouncer.move();
+  }
   
 }
 

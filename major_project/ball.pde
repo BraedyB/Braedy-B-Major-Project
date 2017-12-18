@@ -1,7 +1,7 @@
-class Bouncer{
+class hBouncer{
   float x,y,rad,aniSpeed,opac;
 
-  Bouncer(){
+  hBouncer(){
     opac = random(100);
     x = 0;
     y = height/2;
@@ -9,15 +9,15 @@ class Bouncer{
     opac = 100;
   }
   void move(){
-    fill(255,opac);
-    aniSpeed = random(1,2);
+    fill(color(255,0,0),opac);
+    aniSpeed = random(0.5,5);
 
-    rect(x,y,rad,rad);
+    rect(x,y,rad/4,height);
     
     if (x == 0){
-      Ani.to(this,aniSpeed,"x",width, Ani.CUBIC_OUT);
+      Ani.to(this,aniSpeed,"x",width, Ani.CUBIC_IN);
     }else if (x == width){
-      Ani.to(this,aniSpeed,"x",0, Ani.CUBIC_OUT);
+      Ani.to(this,aniSpeed,"x",0, Ani.CUBIC_IN);
     }
   }
   
