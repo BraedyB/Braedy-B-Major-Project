@@ -1,3 +1,4 @@
+
 import de.looksgood.ani.*;
 import de.looksgood.ani.easing.*;
 
@@ -6,7 +7,8 @@ ArrayList<hBouncer> thehBouncers = new ArrayList<hBouncer>();
 ArrayList<vBouncer> thevBouncers = new ArrayList<vBouncer>();
 
 void setup(){
-  size(800,600);
+  fullScreen();
+  //size(800,600);
   noStroke();
   Ani.init(this);
   for (int i=0; i<6; i++){
