@@ -1,8 +1,8 @@
-
+//import ani
 import de.looksgood.ani.*;
 import de.looksgood.ani.easing.*;
 
-
+//establish two main arrayLists of bouncers - one for vert. movement and one for horz. movement
 ArrayList<hBouncer> thehBouncers = new ArrayList<hBouncer>();
 ArrayList<vBouncer> thevBouncers = new ArrayList<vBouncer>();
 
