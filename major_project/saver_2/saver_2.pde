@@ -14,16 +14,17 @@ void draw(){
   background(255);
   translate(width/2,height/2,0);
   fill(255);
-  //rotateX(rot);
+  rotateX(rot);
   rotateY(rot);
-  rotateZ(rot);
-  box(boxX,boxY,boxZ);
+  //rotateZ(rot);
+  box (boxX,boxY,boxZ);
+ 
   
-  for (int i = 1; i<width; i++){
-    translate(-boxX,-boxY,-boxZ);
-    box(boxX,boxY,boxZ);
+  //for (int i = 1; i<width; i++){
+  //  translate(-boxX,-boxY,-boxZ);
+  //  box(boxX,boxY,boxZ);
     
-  }
+  //}
 
  
 
