@@ -11,8 +11,8 @@ void draw(){
   boxX = 100;
   boxY = 100;
   boxZ = 100;
-  background(255);
   translate(width/2,height/2,0);
+  background(255);
   fill(255);
   rotateX(rot);
   rotateY(rot);
@@ -20,11 +20,11 @@ void draw(){
   box (boxX,boxY,boxZ);
  
   
-  //for (int i = 1; i<width; i++){
-  //  translate(-boxX,-boxY,-boxZ);
-  //  box(boxX,boxY,boxZ);
+  for (int i = 1; i<width; i++){
+    translate(-boxX,-boxY,-boxZ);
+    box(boxX,boxY,boxZ);
     
-  //}
+  }
 
  
 
