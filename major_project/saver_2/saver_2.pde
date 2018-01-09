@@ -1,16 +1,21 @@
-float boxX,boxY,boxZ;
-float rot;
-float scale;
+Box b1;
 
-ArrayList<Box> theBoxes = new ArrayList<Box>();
+float boxX,boxY,boxZ = 100;
+float rot = 0.3;
+float scale = 0.5;
+
+
+
+
 
 void setup(){
  fullScreen(P3D); 
- background(255);
- theBoxes.add(new Box());
+ b1 = new Box(boxX,boxY,boxZ,rot,scale);
 }
 
 void draw(){
-  thisBox.display;
-  thisBox.bounceKinda;
+  b1.bounceKinda();
+  b1.display();
+
+
 }

@@ -3,6 +3,7 @@ class Box {
   float rot = 0.3;
   float boxX,boxY,boxZ;
   float scale = 0.5;
+  float slide = width/6;
   
 Box(float boxX, float boxY, float boxZ, float rot, float scale){
   this.boxX = boxX;
@@ -19,10 +20,7 @@ void display(){
 
 
 void bounceKinda(){
-  boxX = 100;
-  boxY = 100;
-  boxZ = 100;
-  translate(width/2,height/2,0);
+  translate((slide),height/2,0);
   background(255);
   stroke(0);
   rotateX(rot);
@@ -38,22 +36,9 @@ void bounceKinda(){
   }else if (boxX == +100){
     scale ++;
   }
-  
- 
-  
-
-  
-  
-    
-  
- 
- 
-
-  
-  //if(frameCount%60 ==0){
-    for(int i = 0; i<width; i++){
+    for(int j = 0; j<width; j++){
     rot += (0.00001);
   }
-  //}
+  
 }
 }
