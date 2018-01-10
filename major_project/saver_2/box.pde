@@ -4,6 +4,7 @@ class Box {
   float boxX,boxY,boxZ;
   float scale = 0.5;
   float slide = width/6;
+
   
 Box(float boxX, float boxY, float boxZ, float rot, float scale){
   this.boxX = boxX;
@@ -14,8 +15,11 @@ Box(float boxX, float boxY, float boxZ, float rot, float scale){
 }
   
 void display(){
-  fill(255,0,0);
+       fill(255,0,0);
+
+  
   box (boxX,boxY,boxZ);
+  
 }
 
 
@@ -33,8 +37,10 @@ void bounceKinda(){
   
   if (boxX == -100){
     scale --;
+    
   }else if (boxX == +100){
     scale ++;
+    
   }
     for(int j = 0; j<width; j++){
     rot += (0.00001);
