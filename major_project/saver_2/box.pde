@@ -1,9 +1,8 @@
 class Box {
   //data 
   float rot = 0.3;
-  float boxX,boxY,boxZ;
+  float boxX,boxY,boxZ = 100;
   float scale = 0.5;
-  float slide = width/6;
 
   
 Box(float boxX, float boxY, float boxZ, float rot, float scale){
@@ -24,7 +23,8 @@ void display(){
 
 
 void bounceKinda(){
-  translate((slide),height/2,0);
+  fill(255,0,0);
+  translate(slide,height/2);
   background(255);
   stroke(0);
   rotateX(rot);
