@@ -1,31 +1,20 @@
 class Box {
   //data 
-  float rot = 0.3;
-  float boxX,boxY,boxZ = 100;
-  float scale = 0.5;
+  float boxX,boxY,boxZ,rot,scale;
 
-  
-Box(float boxX, float boxY, float boxZ, float rot, float scale){
-  this.boxX = boxX;
-  this.boxY = boxY;
-  this.boxZ = boxZ;
-  this.scale = scale;
-  this.rot = rot;
+Box(){
+   boxX = 100;
+   boxY = 100;
+   boxZ = 100;
+   rot = 0.3;
+   scale = 0.5;
 }
-  
-void display(){
-       fill(255,0,0);
 
-  
-  box (boxX,boxY,boxZ);
-  
-}
 
 
 void bounceKinda(){
   fill(255,0,0);
-  translate(slide,height/2);
-  background(255);
+  translate(width/2,height/2);
   stroke(0);
   rotateX(rot);
   //rotateY(rot);

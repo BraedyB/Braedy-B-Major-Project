@@ -1,24 +1,19 @@
-Box b1,b2;
 
-float boxX = 100;
-float boxY = 100;
-float boxZ = 100;
-float rot = 0.3;
-float scale = 0.5;
-float slide = width/2;
+ArrayList<Box> theBoxes = new ArrayList<Box>();
 
 
 void setup(){
  fullScreen(P3D); 
- b1 = new Box(boxX,boxY,boxZ,rot,scale);
- b2 = new Box(boxX,boxY,boxZ,rot,scale);
-
+  for (int i = 0; i<1; i++){
+    theBoxes.add(new Box());
+  }
 }
 
 void draw(){
-  b1.bounceKinda();
-  b2.bounceKinda();
-  b1.display();
-  b2.display();
+  background(255);
+  for(Box thisBox: theBoxes){
+    thisBox.bounceKinda();
+  }
+
 
 }
