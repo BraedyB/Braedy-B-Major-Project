@@ -1,18 +1,19 @@
 float x,y;
 float rad;
-int weight;
+float opac;
 
 void setup(){
   background(0);
   fullScreen();
   rad = 20;
   
+  
 }
 
 void draw(){
   rain();
   noFill();
-  stroke(255);
+  stroke(255,100);
   ellipse(x,y,rad,rad);
   
   
@@ -23,7 +24,6 @@ void rain(){
     x = random(width);
     y = random(height);
     rad+=5;
-    weight -=0.05;
   }
   if (rad >= 400){
     x = random(width);
