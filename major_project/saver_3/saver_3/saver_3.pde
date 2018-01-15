@@ -1,13 +1,11 @@
 float x,y;
 float rad;
 float opac;
-int counter;
 
 void setup(){
   background(0,0,0);
   fullScreen();
   rad = 20;
-  
   
   
 }
@@ -16,11 +14,11 @@ void draw(){
   rain();
   strokeWeight(10);
   noFill();
-  stroke(255,100);
+  stroke(255);
   ellipse(x,y,rad,rad);
   rain();
   strokeWeight(10);
-  stroke(0,100);
+  stroke(0);
   ellipse(x,y,rad,rad);
   
   
@@ -29,13 +27,13 @@ void draw(){
 void rain(){
   if (rad >= 20){
     
-    x = random(width);
-    y = random(height);
-    rad+=5;
+    x = noise(width);
+    y = noise(height);
+    rad+=50;
   }
-  if (rad >= 400){
-    x = random(width);
-    y = random(height);
+  if (rad >= 1000){
+    x = noise(width);
+    y = noise(height);
     rad = 20;
     
   }
