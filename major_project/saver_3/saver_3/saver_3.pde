@@ -6,7 +6,7 @@ void setup(){
   smooth();
   background(0,0,0);
   fullScreen();
-  rad = 20;
+  rad = 2;
   
   
 }
@@ -17,7 +17,6 @@ void draw(){
   noFill();
   stroke(255);
   ellipse(x,y,rad,rad);
-  rain();
   strokeWeight(10);
   stroke(0);
   ellipse(x,y,rad,rad);
@@ -26,13 +25,13 @@ void draw(){
   
 }
 void rain(){
-  if (rad >= 20){
+  if (rad >= 2){
     
     x = noise(width);
     y = noise(height);
     rad+=50;
   }
-  if (rad >= 1000){
+  if (rad >= 10000){
     x = noise(width);
     y = noise(height);
     rad = 20;
