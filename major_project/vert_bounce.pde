@@ -13,7 +13,7 @@ class vBouncer{
     fill(color(255,55,55),opac);
     aniSpeed = noise(2.0);
     
-    rect(x,y,width,rad/4);
+    ellipse(x,y,width,rad/4);
     
     if (y == 0){
       Ani.to(this,aniSpeed,"y",height, Ani.CUBIC_IN);

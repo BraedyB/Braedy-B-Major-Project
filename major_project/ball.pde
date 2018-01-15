@@ -14,7 +14,7 @@ class hBouncer{
     fill(color(255,0,0),opac);
     aniSpeed = noise(2.0);
 
-    rect(x,y,rad/4,height);
+    ellipse(x,y,rad/4,height);
     
     if (x == 0){
       Ani.to(this,aniSpeed,"x",width, Ani.CUBIC_IN);
