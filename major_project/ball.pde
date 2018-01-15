@@ -10,8 +10,9 @@ class hBouncer{
   }
 
   void move(){
+    noiseDetail(2,0.8);
     fill(color(255,0,0),opac);
-    aniSpeed = noise(1);
+    aniSpeed = noise(2.0);
 
     rect(x,y,rad/4,height);
     
