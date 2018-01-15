@@ -10,7 +10,7 @@ class vBouncer{
   }
   void move(){
     fill(color(255,55,55),opac);
-    aniSpeed = noise(1,5);
+    aniSpeed = noise(1);
     
     rect(x,y,width,rad/4);
     

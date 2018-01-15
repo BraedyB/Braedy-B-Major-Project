@@ -7,6 +7,7 @@ ArrayList<hBouncer> thehBouncers = new ArrayList<hBouncer>();
 ArrayList<vBouncer> thevBouncers = new ArrayList<vBouncer>();
 
 void setup(){
+  smooth();
   fullScreen();
   //size(800,600);
   noStroke();

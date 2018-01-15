@@ -3,6 +3,7 @@ float rad;
 float opac;
 
 void setup(){
+  smooth();
   background(0,0,0);
   fullScreen();
   rad = 20;

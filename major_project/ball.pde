@@ -11,7 +11,7 @@ class hBouncer{
 
   void move(){
     fill(color(255,0,0),opac);
-    aniSpeed = noise(1,5);
+    aniSpeed = noise(1);
 
     rect(x,y,rad/4,height);
     
