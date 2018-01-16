@@ -8,7 +8,7 @@ void setup(){
   smooth();
   background(0,0,0);
   fullScreen();
-  rad = 20;
+  rad = 0;
   sWeight = 10;
   
   
@@ -16,9 +16,9 @@ void setup(){
 
 void draw(){
   
-  //alpha fading background - this is why the circles appear to fade out.
+  //alpha shading background - this is why the circles appear to fade out.
   noStroke();
-  fill(0,10);
+  fill(0,25);
   rect(0,0,width,height);
   //
   
@@ -26,11 +26,11 @@ void draw(){
   rain();
   strokeWeight(sWeight);
   noFill();
-  stroke(255,100);
+  stroke(175,255,175,255);
   ellipse(x,y,rad,rad);
   rain();
   strokeWeight(sWeight);
-  stroke(0,175,0,100);
+  stroke(0,175,0,255);
   ellipse(x,y,rad,rad);
   
   
@@ -39,19 +39,19 @@ void draw(){
 void rain(){
   //starts the circle's radius at 20 - increase by 25 every iteration, then place the
   //larger circle in a new random coord.
-  if (rad >= 20){
+  if (rad >= 0){
     
-    x = random(0,width);
-    y = random(0,height);
-    rad+=25;
+    x = (width/2);
+    y = (height/2);
+    rad+=5;
     
   }
-  if (rad >= 400){
+  if (rad >= 1700){
     //resets the circle's radius once its radius is greater than 400 and sets it to a
     //random coord again.
-    x = random(0,width);
-    y = random(0,height);
-    rad = 20;
+    x = (width/2);
+    y = (height/2);
+    rad = 0;
     
   }
 }
