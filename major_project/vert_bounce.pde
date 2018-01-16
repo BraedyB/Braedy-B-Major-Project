@@ -3,17 +3,17 @@ class vBouncer{
 
   vBouncer(){
     opac = (100);
-    x = width/2;
+    x = 0;
     y = 0;
     rad = height/8;
     opac = 100;
   }
   void move(){
-    noise(2,0.8);
-    fill(color(255,55,55),opac);
+    noise(3,0.8);
+    stroke(color(255,55,55),opac);
     aniSpeed = noise(2.0);
     
-    ellipse(x,y,width,rad/4);
+    line(x,y,width,height);
     
     if (y == 0){
       Ani.to(this,aniSpeed,"y",height, Ani.CUBIC_IN);

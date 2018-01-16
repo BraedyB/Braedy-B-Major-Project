@@ -13,7 +13,7 @@ void setup(){
   //size(800,600);
   noStroke();
   Ani.init(this);
-  for (int i=0; i<20; i++){
+  for (int i=0; i<30; i++){
     thevBouncers.add(new vBouncer());
     thehBouncers.add(new hBouncer());
     
