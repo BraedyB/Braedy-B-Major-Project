@@ -14,6 +14,9 @@ void setup(){
 }
 
 void draw(){
+  noStroke();
+  fill(0,10);
+  rect(0,0,width,height);
   rain();
   strokeWeight(sWeight);
   noFill();
@@ -21,7 +24,7 @@ void draw(){
   ellipse(x,y,rad,rad);
   rain();
   strokeWeight(sWeight);
-  stroke(0,100);
+  stroke(0,175,0,100);
   ellipse(x,y,rad,rad);
   
   
