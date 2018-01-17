@@ -16,7 +16,7 @@ Box(){
 
 void bounceKinda(){
   fill(0,0,255);
-  translate(50+dist,50);
+  translate(-10+dist,50);
   dist+= 10;
   stroke(175,255,175);
   rotateX(rot);
