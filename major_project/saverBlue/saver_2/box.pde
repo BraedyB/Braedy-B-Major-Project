@@ -1,3 +1,5 @@
+ArrayList<Box> theBoxes = new ArrayList<Box>();
+
 class Box {
   //data 
   float boxX,boxY,boxZ,rot,scale;
@@ -14,8 +16,9 @@ Box(){
 
 void bounceKinda(){
   fill(0,0,255);
-  translate(width/2,height/2);
-  stroke(0);
+  translate(50+dist,50);
+  dist+= 10;
+  stroke(175,255,175);
   rotateX(rot);
   //rotateY(rot);
   rotateZ(rot);

@@ -1,20 +1,23 @@
-
-ArrayList<Box> theBoxes = new ArrayList<Box>();
+float dist;
 
 
 void setup(){
+ background(0);
  fullScreen(P3D); 
-  for (int i = 0; i<1; i++){
+  for (int i = 0; i<1; ++i){
     theBoxes.add(new Box());
+    
+    
   }
 }
-
+  
+  
 void draw(){
+  stroke(0);
   fill(0,10);
   rect(0,0,width,height);
   
-  for(Box thisBox: theBoxes){
-    thisBox.bounceKinda();
+  for(Box thisBox: theBoxes){   thisBox.bounceKinda();
   }
 
 
