@@ -10,7 +10,9 @@ void setup(){
 }
 
 void draw(){
-  background(255);
+  fill(0,10);
+  rect(0,0,width,height);
+  
   for(Box thisBox: theBoxes){
     thisBox.bounceKinda();
   }

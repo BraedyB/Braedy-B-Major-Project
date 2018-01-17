@@ -13,7 +13,7 @@ Box(){
 
 
 void bounceKinda(){
-  fill(255,0,0);
+  fill(0,0,255);
   translate(width/2,height/2);
   stroke(0);
   rotateX(rot);
@@ -22,6 +22,7 @@ void bounceKinda(){
   boxZ -= scale;
   boxX -= scale;
   boxY -= scale;
+  box(boxX,boxY,boxZ);
   
   
   if (boxX == -100){
