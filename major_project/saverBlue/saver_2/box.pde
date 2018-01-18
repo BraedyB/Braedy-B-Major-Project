@@ -17,7 +17,7 @@ Box(){
 
 void bounceKinda(){
   fill(0,0,255);
-  translate(initial+dist,50);
+  translate(initial+dist,random(height));
   dist+= 5;
   stroke(175,255,175);
   rotateX(rot);
@@ -28,6 +28,10 @@ void bounceKinda(){
   boxY -= scale;
   box(boxX,boxY,boxZ);
   
+   if (dist >= width){
+    initial = -10;
+    dist = 0;
+  }
   
   if (boxX == -150){
     scale --;
