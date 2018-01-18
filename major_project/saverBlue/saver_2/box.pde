@@ -1,3 +1,4 @@
+float initial = -10;
 ArrayList<Box> theBoxes = new ArrayList<Box>();
 
 class Box {
@@ -16,8 +17,8 @@ Box(){
 
 void bounceKinda(){
   fill(0,0,255);
-  translate(-10+dist,50);
-  dist+= 10;
+  translate(initial+dist,50);
+  dist+= 5;
   stroke(175,255,175);
   rotateX(rot);
   //rotateY(rot);
@@ -28,16 +29,18 @@ void bounceKinda(){
   box(boxX,boxY,boxZ);
   
   
-  if (boxX == -100){
+  if (boxX == -150){
     scale --;
     
-  }else if (boxX == +100){
+  }else if (boxX == +150){
     scale ++;
     
   }
     for(int j = 0; j<width; j++){
     rot += (0.00001);
   }
-  
+  if (initial >= width){
+    initial = -10;
+  }
 }
 }
