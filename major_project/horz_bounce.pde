@@ -10,12 +10,14 @@ class hBouncer{
   }
 
   void move(){
+    //using noise instead of random creates a more stable & consitent effect
     noise(3,0.8);
     stroke(color(255,0,0),opac);
     aniSpeed = noise(2.0);
 
     line(x,y,width,height);
     
+    //Ani movement(s)
     if (x == 0){
       Ani.to(this,aniSpeed,"x",width, Ani.CUBIC_IN);
     }else if (x == width){

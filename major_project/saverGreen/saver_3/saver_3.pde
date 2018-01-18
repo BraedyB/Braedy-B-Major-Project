@@ -1,3 +1,14 @@
+//GREEN SCREENSAVER - Braedy Borowsky//
+//Spawns green radar pings at a random x,y coord - only starts a new ping once the 
+//radius of the circle > the screen's width*2
+
+//Quite simple - but some refinement was made in order to create some more visual
+//interest.
+
+
+
+
+
 //globals
 float x,y;
 float rad;
@@ -22,14 +33,14 @@ void setup(){
 
 void draw(){
   
-  //alpha shading background - this is why the circles appear to fade out.
+  //alpha-shader background - present in all screensavers except for saverRed
   noStroke();
   fill(0,25);
   rectMode(1);
   rect(0,0,width,height);
-  //
   
-  
+//draws the primary circle, then a lighter one in order to create some visual 
+//contrast
   rain();
   strokeWeight(sWeight);
   noFill();
@@ -43,15 +54,17 @@ void draw(){
   
 }
 void rain(){
-  //starts the circle's radius at 20 - increase by 25 every iteration, then place the
-  //larger circle in a new random coord.
+  //starts the circle's radius at 0 - increase by (speed) every iteration
   if (rad >= 0){
     rad+= speed;
     
   }
+  
+//resets the circle's radius once its radius is greater than the screen width*2 
+//and sets it to a random coord again.
   if (rad >= width*2){
-    //resets the circle's radius once its radius is greater than 400 and sets it to a
-    //random coord again.
+   
+
     x = random(width);
     y = random(height);
     rad = 0;

@@ -15,6 +15,8 @@ class vBouncer{
     
     line(x,y,width,height);
     
+    
+    //Ani movement(s)
     if (y == 0){
       Ani.to(this,aniSpeed,"y",height, Ani.CUBIC_IN);
     }else if (y == height){

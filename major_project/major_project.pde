@@ -1,8 +1,15 @@
+//RED SCREENSAVER - Braedy Borowsky//
+//Creates a vibrating fan of lines, looks like a horizon line at a strange angle
+
+
+
+
 //import ani
 import de.looksgood.ani.*;
 import de.looksgood.ani.easing.*;
 
-//establish two main arrayLists of bouncers - one for vert. movement and one for horz. movement
+//establish two main arrayLists of bouncers - the bouncers reflect off of the diagonal
+//line running through the screen from left-right.
 ArrayList<hBouncer> thehBouncers = new ArrayList<hBouncer>();
 ArrayList<vBouncer> thevBouncers = new ArrayList<vBouncer>();
 
@@ -37,10 +44,3 @@ void draw(){
   }
   
 }
-
-//void mousePressed(){
-//  Ani.to(this,2,"x", width, Ani.CUBIC_IN);
-//  if (x == width){
-//    Ani.to(this,2,"x",0,Ani.CUBIC_IN);
-//  }
-//}
